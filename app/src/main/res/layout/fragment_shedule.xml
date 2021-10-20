@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/TextViewHeader"
+            android:background="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="center"
+            android:text="@string/schedule_a_session"
+            android:layout_height="wrap_content"
+            app:drawableStartCompat="@drawable/ic_stroke" />
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            android:inputType="textPersonName"
+            android:layout_marginTop="@dimen/_26sdp"
+            style="@style/EditTextMain"
+            android:background="@drawable/shape_announcement"
+            android:hint="@string/name"
+            android:autofillHints="" />
+        <EditText
+            android:id="@+id/et_surname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/et_name"
+            android:inputType="textPersonName"
+            android:layout_marginTop="@dimen/_26sdp"
+            style="@style/EditTextMain"
+            android:background="@drawable/shape_announcement"
+            android:hint="@string/surname"
+            android:autofillHints="" />
+        <LinearLayout
+            android:id="@+id/ll_year"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/et_surname"
+            android:layout_marginTop="@dimen/_26sdp"
+            style="@style/LinearLayoutSchedule"
+            android:weightSum="2"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                style="@style/EditTextSchedule"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_announcement"
+                android:hint="@string/_05"
+                android:layout_weight="1" />
+            <TextView
+                android:layout_width="0dp"
+                style="@style/EditTextSchedule"
+                android:background="@drawable/shape_announcement"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_height="wrap_content"
+                android:hint="@string/year"
+                android:layout_weight="1" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_day"
+            android:layout_width="@dimen/_127sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_25sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="@dimen/_26sdp"
+            style="@style/EditTextSchedule"
+            android:background="@drawable/shape_announcement"
+            android:hint="@string/_05"
+            app:layout_constraintTop_toBottomOf="@id/ll_year"/>
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="5"
+            android:layout_marginTop="@dimen/_23sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:gravity="center"
+            style="@style/LinearLayoutSchedule"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_day">
+            <TextView
+                android:layout_width="0dp"
+                android:padding="@dimen/_16sdp"
+                android:background="@drawable/shape_announcement"
+                android:layout_height="wrap_content"
+                android:hint="3"
+                android:layout_weight="1.2" />
+            <TextView
+                android:layout_width="0dp"
+                android:padding="@dimen/_16sdp"
+                android:background="@drawable/shape_announcement"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_9sdp"
+                android:hint="@string/_05"
+                android:layout_weight="1.2" />
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="0.2"
+                android:background="@color/grey"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:layout_gravity="center"
+                android:layout_height="2dp"/>
+            <TextView
+                android:layout_width="0dp"
+                android:padding="@dimen/_16sdp"
+                android:background="@drawable/shape_announcement"
+                android:layout_height="wrap_content"
+                android:hint="5"
+                android:layout_weight="1.2" />
+            <TextView
+                android:layout_width="0dp"
+                android:padding="@dimen/_16sdp"
+                android:background="@drawable/shape_announcement"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_9sdp"
+                android:hint="@string/_05"
+                android:layout_weight="1.2" />
+        </LinearLayout>
+        <Button
+            android:id="@+id/btn_add_now"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_now"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            style="@style/button" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

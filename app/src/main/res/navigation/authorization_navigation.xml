@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/navigation_sign_in"
+    android:id="@+id/authorization_navigation">
+
+    <fragment
+        android:id="@+id/navigation_sign_in"
+        android:name="com.dnapayments.presentation.authorization.sign_in.SignInFragment"
+        android:label="SignFragment"
+        tools:layout="@layout/fragment_sign_in" >
+
+        <action
+            android:id="@+id/action_navigation_sign_in_to_navigation_sign_up"
+            app:destination="@id/navigation_sign_up" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_sign_up"
+        android:name="com.dnapayments.presentation.authorization.sign_up.SignUpFragment"
+        android:label="SignUpFragment"
+        tools:layout="@layout/fragment_sign_up_email" >
+        <action
+            android:id="@+id/action_navigation_sign_up_to_navigation_sign_up_password"
+            app:destination="@id/navigation_sign_up_password" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_sign_up_password"
+        android:name="com.dnapayments.presentation.authorization.sign_up_password.SignUpPasswordFragment"
+        android:label="SignUpPasswordFragment"
+        tools:layout="@layout/fragment_sign_up_password" >
+    </fragment>
+
+</navigation>

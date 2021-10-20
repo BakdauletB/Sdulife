@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    tools:ignore="UseCompoundDrawables">
+    <ImageView
+        android:id="@+id/img_image"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_196sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:src="@drawable/mask"
+        android:contentDescription="@null" />
+    <TextView
+        android:id="@+id/tv_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/soul_condition"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:textColor="@color/black"
+        android:layout_marginStart="@dimen/_15sdp"/>
+
+
+</LinearLayout>

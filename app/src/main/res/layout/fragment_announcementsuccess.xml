@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_congrats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/success"
+        android:layout_marginTop="@dimen/_180sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@null" />
+    <TextView
+        android:id="@+id/tv_congrats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:fontFamily="@font/sf_pro_display_thin"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/_31sdp"
+        android:textSize="@dimen/_24ssp"
+        app:layout_constraintTop_toBottomOf="@id/iv_congrats"
+        android:text="@string/congrats"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_6sdp"
+        app:layout_constraintTop_toBottomOf="@id/tv_congrats"
+        android:text="@string/your_announcement_was_placed_successfully"/>
+    <Button
+        android:id="@+id/btn_back_to_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/back_to_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        style="@style/button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

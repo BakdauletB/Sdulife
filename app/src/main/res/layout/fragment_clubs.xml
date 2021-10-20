@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/ll_search"
+                    android:layout_width="match_parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:background="@drawable/shape_search"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="26dp"
+                    android:layout_height="wrap_content">
+                        <ImageView
+                            android:padding="16dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_search"/>
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="16dp"
+                            android:inputType="text"
+                            android:background="@null"
+                            android:hint="@string/et_hint_search"
+                            android:autofillHints="" />
+                </LinearLayout>
+            <TextView
+                android:id="@+id/tv_my_follewed_clubs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_17sdp"
+                android:textColor="@color/black"
+                android:layout_marginStart="@dimen/_25sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_search"
+                android:text="My Followed clubs"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_clubs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    tools:itemCount="4"
+                    tools:listitem="@layout/item_founds"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:layout_constraintTop_toBottomOf="@id/tv_my_follewed_clubs"
+                        android:layout_marginTop="@dimen/_10sdp" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

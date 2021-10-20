@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation.xml"
-    app:startDestination="@id/navigation_characters">
+    app:startDestination="@id/navigation_news">
 
     <fragment
         android:id="@+id/navigation_characters"
@@ -21,20 +21,148 @@
 
     <fragment
         android:id="@+id/navigation_profile"
-        android:name="com.dnapayments.presentation.profile.ProfileFragment"
+        android:name="com.dnapayments.presentation.characters.profile.ProfileFragment"
         android:label="ProfileFragment"
         tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/navigation_details"
-        android:name="com.dnapayments.presentation.details.DetailsFragment"
+        android:name="com.dnapayments.presentation.characters.details.DetailsFragment"
         android:label="DetailsFragment"
         tools:layout="@layout/fragment_details" />
 
     <fragment
         android:id="@+id/navigation_settings"
-        android:name="com.dnapayments.presentation.settings.SettingsFragment"
+        android:name="com.dnapayments.presentation.characters.settings.SettingsFragment"
         android:label="SettingsFragment"
         tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/navigation_news"
+        android:name="com.dnapayments.presentation.sdulife.news.NewsFragment"
+        android:label="NewsFragment"
+        tools:layout="@layout/fragment_news" >
+
+        <action
+            android:id="@+id/action_navigation_news_to_navigation_founds_details"
+            app:destination="@id/navigation_founds_details" />
+        <action
+            android:id="@+id/action_navigation_news_to_navigation_news_detail"
+            app:destination="@id/navigation_news_detail" />
+        <action
+            android:id="@+id/action_navigation_news_to_navigation_announcement_detail"
+            app:destination="@id/navigation_announcement_detail" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_announcement_detail"
+        android:name="com.dnapayments.presentation.sdulife.news.announcement.detail.AnnouncementDetailFragment"
+        android:label="AnnouncementDetailFragment"
+        tools:layout="@layout/fragment_announcement_detail" >
+        <action
+            android:id="@+id/action_navigation_announcement_detail_to_navigation_announcement_success"
+            app:destination="@id/navigation_announcement_success" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_announcement_success"
+        android:name="com.dnapayments.presentation.sdulife.news.announcement.success.AnnouncementSuccessFragment"
+        android:label="AnnouncementSuccessFragment"
+        tools:layout="@layout/fragment_announcementsuccess" >
+        <action
+            android:id="@+id/action_navigation_announcement_success_to_navigation_announcement_detail_second"
+            app:destination="@id/navigation_announcement_detail_second" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_announcement_detail_second"
+        android:name="com.dnapayments.presentation.sdulife.news.announcement.detailsecond.AnnouncementDetailSecondFragment"
+        android:label="AnnouncementDetailSecondFragment"
+        tools:layout="@layout/fragment_annoucement_detail_second" />
+    <fragment
+        android:id="@+id/navigation_founds_details"
+        android:name="com.dnapayments.presentation.sdulife.news.founds.details.FoundsDetailFragment"
+        android:label="FoundsDetailFragment"
+        tools:layout="@layout/fragment_founds_detail" />
+    <fragment
+        android:id="@+id/navigation_news_detail"
+        android:name="com.dnapayments.presentation.sdulife.news.sdunews.detail.NewDetailFragment"
+        android:label="NewDetailFragment"
+        tools:layout="@layout/fragment_newdetail" />
+    <fragment
+        android:id="@+id/navigation_clubs"
+        android:name="com.dnapayments.presentation.sdulife.clubs.ClubsFragment"
+        android:label="ClubsFragment"
+        tools:layout="@layout/fragment_clubs" >
+        <action
+            android:id="@+id/action_navigation_clubs_to_navigation_club_detail"
+            app:destination="@id/navigation_club_detail"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_club_detail"
+        android:name="com.dnapayments.presentation.sdulife.clubs.detail.ClubDetailFragment"
+        android:label="ClubDetailFragment"
+        tools:layout="@layout/fragment_club_detail" >
+        <action
+            android:id="@+id/action_navigation_club_detail_to_navigation_club_follow_request"
+            app:destination="@id/navigation_club_follow_request" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_club_follow_request"
+        android:name="com.dnapayments.presentation.sdulife.clubs.follow_request.ClubFollowRequestFragment"
+        android:label="ClubFollowRequestFragment"
+        tools:layout="@layout/fragment_club_followrequest" />
+    <fragment
+        android:id="@+id/navigation_development"
+        android:name="com.dnapayments.presentation.sdulife.development.DevelopmentFragment"
+        android:label="DevelopmentFragment"
+        tools:layout="@layout/fragment_development" >
+        <action
+            android:id="@+id/action_navigation_development_to_navigation_recommendation"
+            app:destination="@id/navigation_recommendation" />
+        <action
+            android:id="@+id/action_navigation_development_to_navigation_appointment"
+            app:destination="@id/navigation_appointment" />
+        <action
+            android:id="@+id/action_navigation_development_to_navigation_test"
+            app:destination="@id/navigation_test" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_recommendation"
+        android:name="com.dnapayments.presentation.sdulife.development.recommendation.RecommendationFragment"
+        android:label="RecommendationFragment"
+        tools:layout="@layout/fragment_recommendation" />
+    <fragment
+        android:id="@+id/navigation_appointment"
+        android:name="com.dnapayments.presentation.sdulife.development.appointment.AppoinmentFragment"
+        android:label="AppoinmentFragment"
+        tools:layout="@layout/fragment_appointment" />
+    <fragment
+        android:id="@+id/navigation_test"
+        android:name="com.dnapayments.presentation.sdulife.development.test.TestFragment"
+        android:label="TestFragment"
+        tools:layout="@layout/fragment_test" >
+        <action
+            android:id="@+id/action_navigation_test_to_navigation_schedule"
+            app:destination="@id/navigation_schedule" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_schedule"
+        android:name="com.dnapayments.presentation.sdulife.development.test.schedule.ScheduleFragment"
+        android:label="ScheduleFragment"
+        tools:layout="@layout/fragment_shedule" />
+    <fragment
+        android:id="@+id/navigation_notification"
+        android:name="com.dnapayments.presentation.sdulife.notification.NotificationFragment"
+        android:label="NotificationFragment"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/navigation_profile_sdulife"
+        android:name="com.dnapayments.presentation.sdulife.profile.ProfileSduFragment"
+        android:label="ClubsFragment"
+        tools:layout="@layout/fragment_clubs" />
+
 
 
 </navigation>

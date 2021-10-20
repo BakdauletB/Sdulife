@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:id="@+id/toolbar"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:weightSum="1"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="wrap_content">
+<!--        <ImageView-->
+<!--            android:id="@+id/iv_back"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_weight="0.4"-->
+<!--            android:visibility="visible"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src="@drawable/ic_stroke"-->
+<!--            android:contentDescription="@null" />-->
+        <TextView
+            android:id="@+id/toolbar_title"
+            style="@style/TextViewHeader"
+            android:layout_width="0dp"
+            android:layout_marginStart="@dimen/_60sdp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:text="@string/loading" />
+    </LinearLayout>
+
+</androidx.appcompat.widget.Toolbar>

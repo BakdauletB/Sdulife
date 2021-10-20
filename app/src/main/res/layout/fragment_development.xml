@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/ll_recommendation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main_color"
+            app:layout_constraintTop_toTopOf="parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/for_your_condition"
+                android:textSize="@dimen/_12ssp"
+                android:layout_marginTop="@dimen/_35sdp"
+                android:textColor="@color/white"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_24ssp"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:textColor="@color/white"
+                android:text="Recommendation"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="20+ items"
+                android:textColor="@color/grey"
+                android:layout_marginBottom="@dimen/_35sdp"
+                android:textSize="@dimen/_12ssp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:gravity="center"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_appointment"
+            app:layout_constraintTop_toBottomOf="@id/ll_recommendation"
+            android:layout_width="match_parent"
+            android:background="#31384F"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="From PhD of Psychology"
+                android:textSize="@dimen/_12ssp"
+                android:layout_marginTop="@dimen/_35sdp"
+                android:textColor="@color/white"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_24ssp"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:textColor="@color/white"
+                android:text="Appointment"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="20+ new items"
+                android:textColor="@color/grey"
+                android:layout_marginBottom="@dimen/_35sdp"
+                android:textSize="@dimen/_12ssp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:gravity="center"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/ll_appointment"
+            android:background="#D64747"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Skills assessment"
+                android:textSize="@dimen/_12ssp"
+                android:layout_marginTop="@dimen/_35sdp"
+                android:textColor="@color/white"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_24ssp"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:textColor="@color/white"
+                android:text="Test"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="20+ new items"
+                android:textColor="@color/grey"
+                android:layout_marginBottom="@dimen/_35sdp"
+                android:textSize="@dimen/_12ssp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:gravity="center"/>
+        </LinearLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

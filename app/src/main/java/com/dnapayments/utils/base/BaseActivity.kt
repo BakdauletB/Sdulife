@@ -8,6 +8,8 @@ import android.widget.Toast
 import androidx.annotation.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
+import com.dnapayments.R
 
 abstract class BaseActivity : AppCompatActivity(), IResourcesIDListener {
 
@@ -66,4 +68,6 @@ abstract class BaseActivity : AppCompatActivity(), IResourcesIDListener {
      */
     @ColorInt
     override fun getClr(@ColorRes id: Int): Int = ContextCompat.getColor(this, id)
+
+
 }
